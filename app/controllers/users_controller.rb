@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # Handle successful save
+      log_in(@user)
       flash[:success] = "Chao mung ban den voi trang web an hai cua toi!"
       redirect_to @user
     else
