@@ -1,8 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
+    # byebug
   end
 
   def help
+    # byebug
   end
 
   def about
