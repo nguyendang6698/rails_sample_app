@@ -6,10 +6,12 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate(page: params[:page], per_page: 30)
     # @users = User.all
+    # byebug
   end
   
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     # byebug
   end
 
@@ -58,16 +60,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
-    # Before filter
-
-    # Confirms a logged-in user
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Xin hay dang nhap!"
-        redirect_to(login_url)
-      end
-    end
+    # Before filters
 
     # Confirms the correct user
     def correct_user

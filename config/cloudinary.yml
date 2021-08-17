@@ -1,0 +1,18 @@
+development:
+  cloud_name: dubyqkqrn
+  api_key: '395287662584967'
+  api_secret: 4lNO_cvAE4o8UMTg5SquGPpEGpU
+  secure: true
+  cdn_subdomain: true
+production:
+  cloud_name: dubyqkqrn
+  api_key: '395287662584967'
+  api_secret: 4lNO_cvAE4o8UMTg5SquGPpEGpU
+  secure: true
+  cdn_subdomain: true
+test:
+  cloud_name: dubyqkqrn
+  api_key: '395287662584967'
+  api_secret: 4lNO_cvAE4o8UMTg5SquGPpEGpU
+  secure: true
+  cdn_subdomain: true
